@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Collision : MonoBehaviour
+public class PCollision : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "End")
+        if (collision.collider.name == "Teleport")
         {
-            // Application.Quit();
+            //Application.Quit();
             Application.LoadLevel(Application.loadedLevel);
-            Application.OpenURL("https://www.youtube.com/watch?v=HIPQQ4qnl6Q");
+            // Application.OpenURL("https://www.youtube.com/watch?v=HIPQQ4qnl6Q");
 
         }
     }
